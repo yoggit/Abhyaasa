@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhyaasa — User Guide &amp; Help</title>
+  <meta name="description" content="How to use Abhyaasa: a step-by-step guide for parents, students, and teachers, plus quick fixes for common issues." />
+  <style>
+    :root {
+      --navy-deep: #0D1117;
+      --navy-surface: #141C27;
+      --navy-elevated: #1A2332;
+      --navy-border: #2A3A50;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --warm-white: #E8DCC8;
+      --warm-mid: #B0A898;
+      --warm-dim: #7A8CA0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #16202e 0%, var(--navy-deep) 60%);
+      color: var(--warm-white);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
+    header { text-align: center; }
+    .logo {
+      width: 96px; height: 96px; border-radius: 50%;
+      box-shadow: 0 8px 40px rgba(201,168,76,0.25);
+      border: 2px solid var(--navy-border);
+    }
+    h1 { font-size: 2.1rem; letter-spacing: 0.5px; margin-top: 18px; color: var(--gold); font-weight: 800; }
+    .tagline { text-transform: uppercase; letter-spacing: 4px; font-size: 0.75rem; color: var(--warm-dim); margin-top: 6px; }
+    .lede { color: var(--warm-mid); font-size: 1.05rem; margin: 18px auto 0; max-width: 32em; }
+
+    .toc { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 28px 0 8px; }
+    .toc a {
+      text-decoration: none; color: var(--gold-light); font-size: 0.85rem; font-weight: 600;
+      border: 1px solid var(--navy-border); border-radius: 999px; padding: 7px 15px; background: var(--navy-surface);
+    }
+    .toc a:hover { border-color: var(--gold); }
+
+    section.block {
+      background: var(--navy-surface); border: 1px solid var(--navy-border);
+      border-radius: 16px; padding: 24px 26px; margin-top: 26px;
+    }
+    section.block h2 { font-size: 1.25rem; color: var(--gold); margin-bottom: 4px; }
+    section.block .sub { color: var(--warm-dim); font-size: 0.85rem; margin-bottom: 14px; }
+    section.block h3 { font-size: 1rem; color: var(--warm-white); margin: 20px 0 6px; }
+    section.block ol, section.block ul { padding-left: 22px; }
+    section.block li { margin: 8px 0; color: var(--warm-mid); }
+    section.block li strong { color: var(--warm-white); }
+    section.block p { color: var(--warm-mid); margin: 8px 0; }
+    .pill { display:inline-block; font-size:0.72rem; font-weight:700; letter-spacing:0.5px; text-transform:uppercase;
+      color:#241c05; background:linear-gradient(180deg,var(--gold-light),var(--gold)); border-radius:6px; padding:2px 8px; vertical-align:middle; }
+
+    details.faq {
+      border: 1px solid var(--navy-border); border-radius: 12px; margin-top: 12px;
+      background: var(--navy-elevated); overflow: hidden;
+    }
+    details.faq summary {
+      cursor: pointer; padding: 14px 16px; font-weight: 600; color: var(--warm-white);
+      list-style: none; font-size: 0.95rem;
+    }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary::before { content: "＋ "; color: var(--gold); font-weight: 800; }
+    details.faq[open] summary::before { content: "－ "; }
+    details.faq .body { padding: 0 16px 16px; color: var(--warm-mid); font-size: 0.92rem; }
+    details.faq .body ol, details.faq .body ul { padding-left: 20px; margin: 6px 0; }
+    details.faq .body li { margin: 5px 0; }
+
+    a.inline { color: var(--gold-light); }
+    footer { text-align: center; margin-top: 40px; color: var(--warm-dim); font-size: 0.8rem; }
+    footer a { color: var(--gold); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="icon.png" alt="Abhyaasa logo" />
+      <h1>User Guide &amp; Help</h1>
+      <div class="tagline">Abhyaasa · The Practice Tracker</div>
+      <p class="lede">Everything you need to start tracking practice, share progress with a teacher, and fix the little things yourself.</p>
+    </header>
+
+    <nav class="toc">
+      <a href="#start">Getting started</a>
+      <a href="#parents">Parents &amp; students</a>
+      <a href="#tanpura">Tanpura</a>
+      <a href="#teachers">Teachers</a>
+      <a href="#help">Troubleshooting</a>
+    </nav>
+
+    <!-- ─────────── GETTING STARTED ─────────── -->
+    <section class="block" id="start">
+      <h2>Getting started</h2>
+      <p class="sub">Two ways to use Abhyaasa — pick what suits you.</p>
+
+      <h3>🌐 Web app <span class="pill">Any device</span></h3>
+      <p>Open <a class="inline" href="https://abhyaasa-manthana.web.app">abhyaasa-manthana.web.app</a> on an iPhone, Android phone, or computer — nothing to install. On a phone, use your browser’s <strong>Add to Home Screen</strong> to open it like a real app. <strong>Teachers use the web app.</strong></p>
+
+      <h3>📱 Android app <span class="pill">Offline + reminders</span></h3>
+      <p>The Android app adds offline logging and a daily practice reminder. On the <a class="inline" href="https://yoggit.github.io/Abhyaasa/">home page</a> tap <strong>Download Android App</strong>, open <strong>Abhyaasa.apk</strong>, allow <strong>“Install unknown apps”</strong> if asked, then <strong>Install</strong>. It works fully offline; signing in adds cloud backup, teacher sharing, and fees.</p>
+    </section>
+
+    <!-- ─────────── PARENTS & STUDENTS ─────────── -->
+    <section class="block" id="parents">
+      <h2>For parents &amp; students</h2>
+      <p class="sub">Set up your child, log practice, and (optionally) share with a teacher.</p>
+
+      <h3>1. Create your account &amp; child profile</h3>
+      <ol>
+        <li>Open the app and choose <strong>Parent / Student</strong>.</li>
+        <li>Sign in with <strong>Google</strong> or an <strong>email &amp; password</strong>. (Email sign-ups get a quick verification email — see Troubleshooting if it doesn’t arrive.)</li>
+        <li>Enter your child’s name, pick a <strong>reward</strong> (⭐ star, 💲 dollar, 🎟️ sticker, or your own), and set a <strong>PIN</strong> that locks the Settings screen.</li>
+      </ol>
+
+      <h3>2. Log daily practice</h3>
+      <ol>
+        <li>On the <strong>Practice</strong> calendar, tap today (or any past day).</li>
+        <li>Mark practice <strong>done</strong>, optionally add a <strong>note</strong> your teacher can see, and save. Enjoy the celebration! 🎉</li>
+        <li>Logged the wrong day or by mistake? Just tap that day again to <strong>undo</strong> or re-log.</li>
+      </ol>
+      <p>Track progress under <strong>Earnings</strong> (totals) and <strong>Stars</strong> (streaks, badges, and a practice heatmap).</p>
+
+      <h3>3. Daily reminder <span class="pill">Android</span></h3>
+      <p>In <strong>Settings</strong>, turn on <strong>Daily reminder</strong> and pick a time. You’ll get a gentle notification to practice. (Allow notifications when prompted.)</p>
+
+      <h3>4. Add your child’s teacher (optional)</h3>
+      <ol>
+        <li>Ask your teacher for their <strong>invite code</strong> (they generate it in the web app).</li>
+        <li>In your app, open the teacher/sharing area and <strong>enter the code</strong>. Your teacher becomes a <strong>read-only</strong> viewer of practice and classes.</li>
+        <li>You’re in control — you can <strong>remove</strong> the teacher anytime, which cuts off their access immediately.</li>
+      </ol>
+
+      <h3>5. Classes &amp; fees</h3>
+      <p>If your teacher tracks classes and a fee, you’ll see a monthly total and a <strong>Settle</strong> button. When you’ve paid, tap <strong>Settle</strong> to mark the month done. You’ll get a monthly <strong>settle reminder</strong> on the day &amp; time your teacher chose.</p>
+
+      <h3>6. Your data &amp; privacy</h3>
+      <p>You own your child’s data. In <strong>Settings → Delete my data</strong> you can permanently remove everything and your sign-in account. See the <a class="inline" href="privacy.html">Privacy Policy</a> for details.</p>
+    </section>
+
+    <!-- ─────────── TANPURA ─────────── -->
+    <section class="block" id="tanpura">
+      <h2>🪕 Tanpura drone</h2>
+      <p class="sub">A built-in practice drone to sing and play along with — on both the app and the web.</p>
+
+      <h3>Where to find it</h3>
+      <p>In the <strong>Android app</strong>, tap the <strong>🪕 Tanpura</strong> tab along the bottom. In the <strong>web app</strong>, tap the round <strong>🪕 button</strong> in the bottom-right corner — it’s on every screen. Tap the big <strong>▶</strong> to start the drone; tap it again to stop.</p>
+
+      <h3>Set it up for your practice</h3>
+      <ul>
+        <li><strong>Pitch (Sa)</strong> — choose your Sa with the <strong>–</strong> / <strong>+</strong> buttons, or tap the note to pick from the full list. Each note also shows the harmonium key (e.g. <em>Mid · White 2</em>), handy if you tune to a keyboard.</li>
+        <li><strong>Fine tune</strong> — nudge the pitch a few <strong>cents</strong> sharp or flat to match another instrument exactly.</li>
+        <li><strong>First string</strong> — set the top string to <strong>Pa</strong>, <strong>Ma</strong>, <strong>Ni</strong>, or <strong>Sa</strong> to suit the raga.</li>
+        <li><strong>Speed</strong> &amp; <strong>Volume</strong> — adjust how quickly the strings cycle and how loud it plays.</li>
+      </ul>
+      <p>On <strong>Android</strong> the drone stops when you leave the Tanpura tab. On the <strong>web</strong> it keeps playing while you use the rest of the app, so you can practice as you go — reopen the panel and tap <strong>■</strong> to stop. It needs no internet and stores nothing.</p>
+    </section>
+
+    <!-- ─────────── TEACHERS ─────────── -->
+    <section class="block" id="teachers">
+      <h2>For teachers</h2>
+      <p class="sub">Use the web app to view students, track classes, and manage fees.</p>
+
+      <h3>1. Sign in as a teacher</h3>
+      <p>Open <a class="inline" href="https://abhyaasa-manthana.web.app">abhyaasa-manthana.web.app</a>, choose <strong>Teacher</strong>, and sign in with Google or email.</p>
+
+      <h3>2. Invite parents</h3>
+      <ol>
+        <li>In your teacher area, find <strong>“Invite a parent”</strong> and copy your <strong>invite code</strong> (tap <strong>Generate</strong> the first time).</li>
+        <li>Share the code with a parent. Once they enter it, their child appears in your student list — <strong>read-only</strong>.</li>
+        <li>Need to reset it? <strong>New code</strong> makes a fresh one and the old code stops working.</li>
+      </ol>
+
+      <h3>3. Track classes &amp; notes</h3>
+      <p>For each student you can mark the days a <strong>class</strong> happened and add a short <strong>class note</strong> (what was taught) that the parent can see.</p>
+
+      <h3>4. Fees &amp; the monthly settle reminder</h3>
+      <ol>
+        <li>Set a <strong>per-student fee</strong> (e.g. a per-class amount and currency).</li>
+        <li>Choose the <strong>day &amp; time</strong> each month the parent should be reminded to settle. Abhyaasa sends that reminder automatically.</li>
+        <li>The <strong>billing overview</strong> shows each month’s classes, amount due, and whether the parent has settled.</li>
+      </ol>
+    </section>
+
+    <!-- ─────────── TROUBLESHOOTING ─────────── -->
+    <section class="block" id="help">
+      <h2>Troubleshooting</h2>
+      <p class="sub">Most issues have a quick fix — try these first.</p>
+
+      <details class="faq">
+        <summary>I didn’t get the verification / password email</summary>
+        <div class="body">
+          <ol>
+            <li>Check your <strong>Spam / Junk</strong> and “Promotions” folders.</li>
+            <li>Wait a minute — email can be slow — then use <strong>Resend</strong>.</li>
+            <li>Double-check the address you typed has no typos.</li>
+            <li>Still nothing? Try <strong>Google sign-in</strong> instead — it needs no email step.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>I can’t sign in</summary>
+        <div class="body">
+          <ol>
+            <li>Make sure you’re <strong>online</strong> (Wi-Fi or data).</li>
+            <li>Re-check your email &amp; password; use <strong>Forgot password</strong> to reset.</li>
+            <li>Use the <strong>same method</strong> you signed up with (Google vs. email).</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>The daily practice reminder isn’t showing <span class="pill">Android</span></summary>
+        <div class="body">
+          <ol>
+            <li>In the app <strong>Settings</strong>, confirm <strong>Daily reminder</strong> is <strong>on</strong> and the time is right.</li>
+            <li>In your phone’s <strong>Settings → Apps → Abhyaasa → Notifications</strong>, allow notifications.</li>
+            <li>Turn <strong>off battery optimization</strong> for Abhyaasa (Settings → Apps → Abhyaasa → Battery → <em>Unrestricted</em>) so Android doesn’t delay the alarm.</li>
+            <li>Open the app once after a phone restart so the reminder re-arms.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>I didn’t get the monthly settle reminder</summary>
+        <div class="body">
+          <ol>
+            <li>Make sure you’ve <strong>signed in</strong> at least once and <strong>allowed notifications</strong>.</li>
+            <li>The reminder only appears once your teacher has set a <strong>fee</strong> and a <strong>settle day/time</strong>.</li>
+            <li>Same battery tip as above — keep Abhyaasa <strong>unrestricted</strong>.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>My teacher can’t see my child (or updates)</summary>
+        <div class="body">
+          <ol>
+            <li>Confirm you entered the teacher’s <strong>invite code</strong> and the teacher shows as added.</li>
+            <li>Both of you need to be <strong>online</strong> for changes to sync.</li>
+            <li>Ask the teacher to <strong>refresh</strong> (reload the web page) — new logs appear within moments.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>I entered the invite code but nothing happened</summary>
+        <div class="body">
+          <ol>
+            <li>Re-type the code carefully — <strong>no spaces</strong>, correct upper/lower case.</li>
+            <li>Codes can be reset: ask the teacher for a <strong>New code</strong> and try again.</li>
+            <li>Make sure you’re <strong>online</strong> when you submit it.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>The web app looks out of date or stuck</summary>
+        <div class="body">
+          <ol>
+            <li><strong>Refresh</strong> the page (pull down on mobile, or reload in your browser).</li>
+            <li>Fully <strong>close and reopen</strong> the browser tab or the Home-Screen app.</li>
+            <li>If it added to Home Screen a while ago, <strong>remove and re-add</strong> it to get the latest version.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>I forgot my Settings PIN <span class="pill">Android</span></summary>
+        <div class="body">
+          <p>The PIN only locks the <strong>Settings</strong> screen — your practice logging is unaffected. If you’re <strong>signed in</strong> (cloud backup on), clearing the app’s data or reinstalling resets the PIN and your data returns after you sign back in. If you were using the app <strong>offline with no account</strong>, clearing data also clears local logs — so set a fresh PIN you’ll remember.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>A star shows on the wrong day</summary>
+        <div class="body">
+          <p>Each day’s star just means “practiced that day.” Tap the day to <strong>undo</strong> or re-log on the correct date. Your <strong>Earnings</strong> total counts every log, so logging more than once a day still adds up.</p>
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>How do I delete my data?</summary>
+        <div class="body">
+          <p>Go to <strong>Settings → Delete my data</strong>. This permanently removes your child’s records and your sign-in account. It can’t be undone.</p>
+        </div>
+      </details>
+
+      <p style="margin-top:18px; font-size:0.85rem; color:var(--warm-dim);">Still stuck? Open an issue on <a class="inline" href="https://github.com/yoggit/Abhyaasa/issues">GitHub</a>.</p>
+    </section>
+
+    <footer>
+      <a href="https://yoggit.github.io/Abhyaasa/">← Back to home</a> · <a href="privacy.html">Privacy Policy</a>
+    </footer>
+  </div>
+  <!-- build: 2026-07-03b -->
+</body>
+</html>
